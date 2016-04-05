@@ -12,20 +12,20 @@ export default class InstalledIncomingWebhook extends React.Component {
     static get propTypes() {
         return {
             incomingWebhook: React.PropTypes.object.isRequired,
-            onDeleteClick: React.PropTypes.func.isRequired
+            onDelete: React.PropTypes.func.isRequired
         };
     }
 
     constructor(props) {
         super(props);
 
-        this.handleDeleteClick = this.handleDeleteClick.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
-    handleDeleteClick(e) {
+    handleDelete(e) {
         e.preventDefault();
 
-        this.props.onDeleteClick(this.props.incomingWebhook);
+        this.props.onDelete(this.props.incomingWebhook);
     }
 
     render() {
@@ -69,7 +69,7 @@ export default class InstalledIncomingWebhook extends React.Component {
                 <div className='item-actions'>
                     <a
                         href='#'
-                        onClick={this.handleDeleteClick}
+                        onClick={this.handleDelete}
                     >
                         <FormattedMessage
                             id='installed_integrations.delete'
