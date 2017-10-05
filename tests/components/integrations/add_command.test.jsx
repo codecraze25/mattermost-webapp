@@ -2,9 +2,11 @@
 // See License.txt for license information.
 
 import React from 'react';
+
 import {shallow} from 'enzyme';
 
 import * as Utils from 'utils/utils.jsx';
+
 import AddCommand from 'components/integrations/components/add_command/add_command.jsx';
 
 describe('components/integrations/AddCommand', () => {
